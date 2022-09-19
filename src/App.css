@@ -1,38 +1,110 @@
+h2, h3, p {
+  margin: 0;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3em;
+  width: 100%;
+  background-color: hsl(0, 0%, 100%);
+  border-bottom: .8px solid hsl(0, 0%, 90%);
+  z-index: 1;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: hsl(0, 0%, 95%);
 }
 
-.App-link {
-  color: #61dafb;
+.main-content {
+  margin-top: 3em;
+  padding: 1em;
+  width: 700px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.article-content {
+  padding: .1px 2em;
+  border-radius: 5px;
+  background-color: hsl(0, 0%, 100%);
+
+}
+
+.side-content {
+  flex: 0 0 auto;
+  margin-top: 3em;
+  padding: 1em 0;
+  width: 250px;
+  position: relative;
+}
+
+.card {
+  margin-bottom: 1em;
+  height: 200px;
+  border-radius: 5px;
+}
+
+.card-a {
+  background-color: #d6e4ff;
+}
+
+.card-b {
+  background-color: #efdbff;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0 0 0 30px;
+
+}
+
+.nav {
+  padding: 20px 30px;
+  position: sticky;
+  top: 4em;
+  border-radius: 5px;
+  background-color: hsl(0, 0%, 100%);
+
+  /* border: 1px solid red; */
+}
+
+h2, h3 {
+  margin: 40px 0 8px;
+  padding-bottom: 8px;
+  border-bottom: .8px solid hsl(0, 0%, 90%);
+  scroll-margin-top: 3em;
+}
+
+p {
+  margin: 22px 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+a {
+  color: grey;
+  text-decoration: none;
+}
+
+li {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+li.active > a {
+  color: black;
+  font-weight: 600;
+}
+
+li > a:hover {
+  font-weight: 400;
+  color: blue;
+}
+
+@media screen and ( max-width: 768px ) {
+  .side-content {
+    display: none;
   }
 }
